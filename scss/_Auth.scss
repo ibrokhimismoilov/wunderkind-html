@@ -1,0 +1,124 @@
+.auth-wrapper {
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 15px;
+}
+
+.auth-inner {
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  padding: 30px 15px;
+  border-radius: 15px;
+  background: rgba(#fff, 0.1);
+  box-shadow: 0 5px 15px rgba(#fff, 0.1);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s linear;
+  animation: fadeUp 0.5s forwards linear;
+
+  .form-control:focus {
+    border: 2px solid darken(orange, 0.1);
+    box-shadow: none;
+  }
+
+  .title {
+    text-transform: lowercase;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+    line-height: 1;
+    padding-bottom: 20px;
+    transition: all 0.3s linear;
+  }
+
+  .title::first-letter {
+    text-transform: uppercase;
+  }
+
+  label {
+    color: #fff;
+  }
+
+  .costom-control-label {
+    font-weight: 400;
+  }
+
+  .forgot-password {
+    margin: 0;
+  }
+}
+
+.form {
+  .form-group {
+    width: 100%;
+  }
+}
+
+.password-box {
+  &__error {
+    color: red;
+    text-shadow: 0 0 1px rgba(#fff, 0.5);
+    font-weight: 600;
+  }
+}
+
+
+.linear-activity {
+  overflow: hidden;
+  width: 100%;
+  height: 4px;
+  margin-bottom: 10px;
+  background-color: lightcoral;
+}
+
+.indeterminate {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.indeterminate:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  background-color: orange;
+  animation: indeterminate_first 1.5s infinite ease-out;
+}
+
+.indeterminate:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  background-color: orangered;
+  animation: indeterminate_second 1.5s infinite ease-in;
+}
+
+@keyframes indeterminate_first {
+  0% {
+      left: -100%;
+      width: 100%;
+  }
+  100% {
+      left: 100%;
+      width: 10%;
+  }
+}
+
+@keyframes indeterminate_second {
+  0% {
+      left: -150%;
+      width: 100%;
+  }
+  100% {
+      left: 100%;
+      width: 10%;
+  }
+}

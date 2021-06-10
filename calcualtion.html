@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation</title>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="./fonts/css/all.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- website styles -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="orange">
+
+        <!-- Start of main-bg -->
+        <div class="orange-bg">
+            <img src="./images/bg.jpg" alt="bg" />
+            <div class="orange-bg__glass"></div>
+        </div>
+        <!-- End of main-bg -->
+
+        <!-- Start of Navbar -->
+        <nav class="nav">
+            <div class="container">
+                <a class="nav-logo" id="logo" href="#">
+                    <img src="./images/logo.png" alt="logo" />
+                </a>
+                <ul class="nav__menu">
+                    <li class="nav__menu-item">
+                        <select class="nav__menu-lang">
+                            <option value="en">English</option>
+                            <option value="ru">Russian</option>
+                            <option value="uz">Uzbek</option>
+                        </select>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a class="nav__menu-link" href="#">login</a>
+                    </li>
+                    <li class="nav__menu-item nav__menu-dropdown">
+                        <span class="nav__menu-link">register</span>
+                        <div class="nav__menu-dropdown-inner">
+                            <a class="nav__menu-dropdown-link" href="/tel-number">student</a>
+                            <a class="nav__menu-dropdown-link" href="#">teacher</a>
+                        </div>
+                    </li>
+                    <!-- for logout -->
+                    <li class="nav__menu-item nav__menu-dropdown">
+                        <span class="nav__menu-link">
+                            <span> {user} </span>
+                            <img src="./images/user.jpg" class="nav__menu-user-img" alt="">
+                            <!-- <FaRegUserCircle /> -->
+                        </span>
+                        <div class="nav__menu-dropdown-inner">
+                            <a class="nav__menu-dropdown-link" href="/">
+                                logout
+                            </a>
+                        </div>
+                    </li>
+                    <!-- /for logout -->
+                </ul>
+            </div>
+        </nav>
+        <!-- End of Navbar -->
+
+        <!-- Start of calculation section -->
+        <div class="calculation section">
+            <div class="container calculation__btns">
+                <a href="plus-game.html" class="calculation__btns-item">
+                    <i class="fas fa-plus"></i>
+                </a>
+                <a href="#" class="calculation__btns-item calculation__btns-item_sm">
+                    <span>
+                        <i class="fas fa-plus"></i>
+                    </span>
+                    <span></span>
+                    <span>
+                        <i class="fas fa-minus"></i>
+                    </span>
+                </a>
+                <a href="#" class="calculation__btns-item">
+                    <i class="fas fa-times"></i>
+                </a>
+                <a href="#" class="calculation__btns-item">
+                    <i class="fas fa-slash" style="transform: rotate(90deg);"></i>
+                </a>
+                <a href="#" class="calculation__btns-item">
+                    <i class="fas fa-square-root-alt"></i>
+                </a>
+            </div>
+        </div>
+        <!-- End of  calculation section -->
+
+    </div>
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

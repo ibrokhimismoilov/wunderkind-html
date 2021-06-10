@@ -1,0 +1,51 @@
+.record {
+  display: block;
+  padding-left: 15px;
+  padding-right: 15px;
+  &__inner {
+    max-width: 1110px;
+    height: 100%;
+    padding: 15px;
+    backdrop-filter: blur(20px);
+    background: rgba(#fff, .2);
+    box-shadow: 0 5px 15px rgba(#000, 0.1);
+    transition: all 0.3s ease-in;
+    color: white;
+    overflow-y: auto;
+
+    tbody tr:hover {
+      background: rgba(orangered, 0.4);
+      cursor: pointer;
+      color: #fff;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    .form-group {
+      margin: 0 15px 0 0;
+      .form-control {
+        color: #000;
+        background: rgba(#fff, 0.5);
+      }
+      .form-control:focus {
+        border: 2px solid orange;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &__filter-icon {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    margi

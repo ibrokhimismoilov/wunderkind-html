@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plus Game</title>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="./fonts/css/all.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- website styles -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="orange">
+
+        <!-- Start of main-bg -->
+        <div class="orange-bg">
+            <img src="./images/bg.jpg" alt="bg" />
+            <div class="orange-bg__glass"></div>
+        </div>
+        <!-- End of main-bg -->
+
+        <!-- Start of Navbar -->
+        <nav class="nav">
+            <div class="container">
+                <a class="nav-logo" id="logo" href="#">
+                    <img src="./images/logo.png" alt="logo" />
+                </a>
+                <ul class="nav__menu">
+                    <li class="nav__menu-item">
+                        <select class="nav__menu-lang">
+                            <option value="en">English</option>
+                            <option value="ru">Russian</option>
+                            <option value="uz">Uzbek</option>
+                        </select>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a class="nav__menu-link" href="#">login</a>
+                    </li>
+                    <li class="nav__menu-item nav__menu-dropdown">
+                        <span class="nav__menu-link">register</span>
+                        <div class="nav__menu-dropdown-inner">
+                            <a class="nav__menu-dropdown-link" href="/tel-number">student</a>
+                            <a class="nav__menu-dropdown-link" href="#">teacher</a>
+                        </div>
+                    </li>
+                    <!-- for logout -->
+                    <li class="nav__menu-item nav__menu-dropdown">
+                        <span class="nav__menu-link">
+                            <span> {user} </span>
+                            <img src="./images/user.jpg" class="nav__menu-user-img" alt="">
+                            <!-- <FaRegUserCircle /> -->
+                        </span>
+                        <div class="nav__menu-dropdown-inner">
+                            <a class="nav__menu-dropdown-link" href="/">
+                                logout
+                            </a>
+                        </div>
+                    </li>
+                    <!-- /for logout -->
+                </ul>
+            </div>
+        </nav>
+        <!-- End of Navbar -->
+
+
+        <!-- Start of Plus section -->
+        <div class="game">
+            <div class="game-main">
+                <h1 class="count-down">3</h1>
+            </div>
+
+            <form class="game-settings">
+                <h1 class="title text-center">Plus</h1>
+
+                <!-- Waiting response aniamte -->
+                <!-- <div class="linear-activity">
+                    <div class="indeterminate"></div>
+                </div> -->
+
+                <!-- Error alert -->
+                <!-- <div class="alert alert-danger border border-danger">
+                    <span>There is error text</span>
+                </div> -->
+
+                <div class="form-group">
+                    <label>Xonalar soni:</label>
+                    <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Sonlar orsidagi vaqt(ms):</label>
+                    <input type="number" class="form-control" min="0.1" step=".1" max="60" />
+                </div>
+                <div class="form-group">
+                    <label>Misollar soni:</label>
+                    <input type="number" class="form-control" min="1" max="300" />
+                </div>
+                <button type="submit" class="btn btn-orange">Boshlash</button>
+            </form>
+
+            <div class="game-footer">
+                <div class="container game-footer__inner">
+                    <div class="game-footer__left">
+                        <div class="game-footer__points">
+                            0 / 17
+                        </div>
+                    </div>
+
+                    <div class="game-footer__right">
+                        <span class="btn-icon toggleGameSettings">
+                            <i class="fas fa-cogs"></i>
+                        </span>
+
+                        <span class="btn-icon">
+                            <i class="fas fa-reply"></i>
+                        </span>
+                        <a href="calcualtion.html" class="btn-icon">
+                            <i class="fas fa-home"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Plus section -->
+
+    </div>
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

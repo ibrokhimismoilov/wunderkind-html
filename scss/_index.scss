@@ -1,0 +1,162 @@
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  user-select: none;
+}
+
+
+::-webkit-scrollbar {
+  border-radius: 8px;
+  background: rgba(#fff, 0.9);
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: orange;
+  width: 10px;
+}
+
+::selection {
+  background: orangered;
+  color: #fff;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #222;
+}
+
+a,
+a:hover {
+  text-decoration: none !important;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+body.game-body .nav {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  background: rgba(orangered, 0.1);
+
+  &-logo {
+    padding: 0;
+    margin: 0;
+    height: initial;
+    max-height: 70px;
+    max-width: 70px;
+    width: 100%;
+    img {
+      margin: 0;
+      transform: scale(1);
+    }
+  }
+
+  &__menu {
+    height: 100%;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.section {
+  padding: 30px 0;
+  width: 100%;
+  min-height: calc(100vh - 50px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  cursor: pointer;
+  display: inline-block;
+  color: #ddd;
+  position: relative;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #fff;
+
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &::before {
+    content: "";
+    transition: all 0.3s ease;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shakeX {
+  0%,
+  10%,
+  100% {
+    transform: translateX(0);
+  }
+  2% {
+    transform: translateX(-10px);
+  }
+  6% {
+    transform: translateX(0px);
+  }
+  8% {
+    transform: translateX(10px);
+  }
+}
