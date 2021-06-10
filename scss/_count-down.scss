@@ -1,7 +1,40 @@
 .count-down {
+    position: relative;
     user-select: none;
-    font-size: 120px;
+    font-size: calc(120px);
     font-weight: 700;
     line-height: 1;
     color: orangered;
+    .sqrt {
+        &-inner {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                left: -20px;
+                top: 33px;
+                height: 8px;
+                width: calc(100% + 20px);
+                display: inline-block;
+                background: orangered;
+            }
+        }
+    }    
+}
+
+
+@media (max-width: 767px) {
+    .count-down {
+        font-size: 50px;
+        .sqrt {
+            &-inner {
+                &::before {
+                    left: -8px;
+                    top: 13px;
+                    height: 3px;
+                    width: calc(100% + 8px);
+                }
+            }
+        }    
+    }
 }

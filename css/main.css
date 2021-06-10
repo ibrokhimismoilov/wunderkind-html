@@ -828,18 +828,48 @@ body.game-body .nav__menu li {
 }
 
 .count-down {
+  position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  font-size: 120px;
+  font-size: calc(120px);
   font-weight: 700;
   line-height: 1;
   color: orangered;
 }
 
+.count-down .sqrt-inner {
+  position: relative;
+}
+
+.count-down .sqrt-inner::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 33px;
+  height: 8px;
+  width: calc(100% + 20px);
+  display: inline-block;
+  background: orangered;
+}
+
+@media (max-width: 767px) {
+  .count-down {
+    font-size: 50px;
+  }
+  .count-down .sqrt-inner::before {
+    left: -8px;
+    top: 13px;
+    height: 3px;
+    width: calc(100% + 8px);
+  }
+}
+
 .record {
   display: block;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .record__inner {
